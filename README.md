@@ -1,10 +1,13 @@
 # Create LaserDisc RF with GNURadio
 
-The goal of this project is, to use gnuradio to modulate a NTSC RF signal into a Laserdisc compatible RF signal. To test the LD RF signal, I'm using
+The goal of this project is, to use gnuradio to modulate a NTSC RF signal into a
+Laserdisc compatible RF signal. To test the LD RF signal, I'm using
 [tbc-tools](https://github.com/oyvindln/vhs-decode/wiki/Linux-Build).
+
 
 ```bash
 $> make decode
+
 
 Unable to determine start of field - dropping field
 Unable to determine start of field - dropping field
@@ -24,7 +27,10 @@ $> make tbc
 
 ## Screenshots
 
-![clipboard_20260228153746.bmp](vx_images/clipboard_20260228153746.bmp)
-![clipboard_20260228150127.bmp](vx_images/clipboard_20260228150127.bmp)
+
+![clipboard_20260314170604.bmp](vx_images/clipboard_20260314170604.bmp)
+![clipboard_20260314170629.bmp](vx_images/clipboard_20260314170629.bmp)
+![clipboard_20260314165405.bmp](vx_images/clipboard_20260314165405.bmp)
 ![clipboard_20260228150510.bmp](vx_images/clipboard_20260228150510.bmp)
 ![clipboard_20260228150733.bmp](vx_images/clipboard_20260228150733.bmp)
+
