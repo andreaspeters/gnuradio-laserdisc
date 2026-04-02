@@ -276,7 +276,7 @@ blocks:
     alias: ''
     append: 'False'
     comment: .s16 extension
-    file: /home/andreas/Projekte/gnuradio/create_ld_rf/output.s16
+    file: /home/andreas/Projekte/gnuradio/gnuradio-laserdisc/output.s16
     type: short
     unbuffered: 'False'
     vlen: '1'
