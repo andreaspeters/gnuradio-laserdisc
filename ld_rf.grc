@@ -16,7 +16,7 @@ options:
     output_language: python
     placement: (0,0)
     qt_qss_theme: ''
-    realtime_scheduling: ''
+    realtime_scheduling: '1'
     run: 'True'
     run_command: '{python} -u {filename}'
     run_options: prompt
@@ -45,13 +45,13 @@ blocks:
     start: '0'
     step: '0.01'
     stop: '5'
-    value: '1.9'
+    value: '1.95'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [904, 24.0]
+    coordinate: [1024, 16.0]
     rotation: 0
     state: enabled
 - name: fm_sensitivity
@@ -72,7 +72,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [456, 16.0]
+    coordinate: [504, 16.0]
     rotation: 0
     state: enabled
 - name: freq
@@ -123,39 +123,30 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [592, 16.0]
+    coordinate: [688, 16.0]
     rotation: 0
     state: enabled
-- name: line_length
-  id: variable
+- name: gain
+  id: variable_qtgui_range
   parameters:
-    comment: '910 NTSC
-
-      1135 PAL
-
-      (currently only NTSC supported)'
-    value: '910'
+    comment: ''
+    gui_hint: ''
+    label: Source Gain
+    min_len: '10'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '60'
+    value: '39'
+    widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1464, 24.0]
+    coordinate: [1320, 16.0]
     rotation: 0
-    state: true
-- name: lines_per_frame
-  id: variable
-  parameters:
-    comment: '525 NTSC
-
-      625 PAL'
-    value: '525'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1560, 24.0]
-    rotation: 0
-    state: true
+    state: enabled
 - name: multiply_const
   id: variable_qtgui_range
   parameters:
@@ -168,13 +159,13 @@ blocks:
     start: '-50'
     step: '0.01'
     stop: '-1'
-    value: '-7.5'
+    value: '-7.36'
     widget: counter_slider
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [776, 24.0]
+    coordinate: [856, 16.0]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -207,7 +198,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1016, 24.0]
+    coordinate: [1176, 16.0]
     rotation: 0
     state: enabled
 - name: analog_fm_preemph_0
@@ -307,7 +298,7 @@ blocks:
     coordinate: [776, 392.0]
     rotation: 0
     state: enabled
-- name: analog_sig_source_x_0_0_0
+- name: analog_sig_source_x_0_0_0_0
   id: analog_sig_source_x
   parameters:
     affinity: ''
@@ -327,7 +318,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [776, 528.0]
+    coordinate: [776, 536.0]
     rotation: 0
     state: enabled
 - name: blocks_add_const_vxx_0
@@ -575,6 +566,40 @@ blocks:
     coordinate: [1640, 976.0]
     rotation: 0
     state: disabled
+- name: limesuiteng_sdrdevice_source_0
+  id: limesuiteng_sdrdevice_source
+  parameters:
+    affinity: ''
+    alias: ''
+    antenna: auto
+    calibrate_dciq: Disabled
+    channel_indexes: '[0]'
+    chip_index: '0'
+    comment: ''
+    custom_config_file: ''
+    data_format: fc32
+    deviceHandleHint: ''
+    gain_generic: gain
+    gfir_bandwidth: '0'
+    link_format: i12
+    lms7002m_gain_lna: '0'
+    lms7002m_gain_pga: '0'
+    lms7002m_gain_tia: '-3'
+    lpf: 20e6
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nco_offset: '0'
+    override_lms7002m_rx_gains: Disabled
+    rf_freq: freq
+    rf_oversampling: auto
+    sample_rate: samp_rate
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [104, 416.0]
+    rotation: 0
+    state: enabled
 - name: osmosdr_source_0
   id: osmosdr_source
   parameters:
@@ -613,7 +638,7 @@ blocks:
     ant8: ''
     ant9: ''
     args: '""'
-    bb_gain0: '20'
+    bb_gain0: '16'
     bb_gain1: '20'
     bb_gain10: '20'
     bb_gain11: '20'
@@ -782,7 +807,7 @@ blocks:
     freq7: 100e6
     freq8: 100e6
     freq9: 100e6
-    gain0: '10'
+    gain0: gain
     gain1: '10'
     gain10: '10'
     gain11: '10'
@@ -846,7 +871,7 @@ blocks:
     gain_mode7: 'False'
     gain_mode8: 'False'
     gain_mode9: 'False'
-    if_gain0: '20'
+    if_gain0: '16'
     if_gain1: '20'
     if_gain10: '20'
     if_gain11: '20'
@@ -931,7 +956,7 @@ blocks:
     bus_structure: null
     coordinate: [96, 636.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: qtgui_freq_sink_x_0
   id: qtgui_freq_sink_x
   parameters:
@@ -1045,11 +1070,11 @@ blocks:
     entags: 'True'
     grid: 'True'
     gui_hint: ''
-    label1: Signal 1
+    label1: CVBS
     label10: Signal 10
-    label2: Signal 2
-    label3: Signal 3
-    label4: Signal 4
+    label2: White
+    label3: Burst
+    label4: Blank
     label5: Signal 5
     label6: Signal 6
     label7: Signal 7
@@ -1225,7 +1250,7 @@ connections:
 - [analog_rail_ff_0_0, '0', qtgui_waterfall_sink_x_0_2, '0']
 - [analog_sig_source_x_0, '0', qtgui_time_sink_x_0, '1']
 - [analog_sig_source_x_0_0, '0', qtgui_time_sink_x_0, '2']
-- [analog_sig_source_x_0_0_0, '0', qtgui_time_sink_x_0, '3']
+- [analog_sig_source_x_0_0_0_0, '0', qtgui_time_sink_x_0, '3']
 - [blocks_add_const_vxx_0, '0', blocks_stream_to_vector_0, '0']
 - [blocks_add_const_vxx_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_add_const_vxx_0, '0', virtual_sink_1, '0']
@@ -1241,6 +1266,8 @@ connections:
 - [blocks_stream_demux_0, '1', blocks_null_sink_0, '0']
 - [blocks_stream_to_vector_0, '0', blocks_stream_demux_0, '0']
 - [blocks_vector_to_stream_0, '0', blocks_multiply_const_xx_0, '0']
+- [limesuiteng_sdrdevice_source_0, '0', blocks_complex_to_mag_0, '0']
+- [limesuiteng_sdrdevice_source_0, '0', qtgui_freq_sink_x_0, '0']
 - [osmosdr_source_0, '0', blocks_complex_to_mag_0, '0']
 - [osmosdr_source_0, '0', qtgui_freq_sink_x_0, '0']
 - [virtual_source_0_0, '0', analog_fm_preemph_0, '0']
