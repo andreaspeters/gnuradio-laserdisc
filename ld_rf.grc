@@ -38,14 +38,14 @@ blocks:
   parameters:
     comment: ''
     gui_hint: ''
-    label: Squeeze
+    label: Shift Vert
     min_len: '50'
     orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '0'
-    step: '0.1'
+    step: '0.01'
     stop: '5'
-    value: '2.0'
+    value: '1.9'
     widget: counter_slider
   states:
     bus_sink: false
@@ -161,14 +161,14 @@ blocks:
   parameters:
     comment: ''
     gui_hint: ''
-    label: Shift Vert
+    label: Sqeeze
     min_len: '10'
     orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '-50'
-    step: '-0.1'
+    step: '0.01'
     stop: '-1'
-    value: '-6.5'
+    value: '-7.5'
     widget: counter_slider
   states:
     bus_sink: false
@@ -782,7 +782,7 @@ blocks:
     freq7: 100e6
     freq8: 100e6
     freq9: 100e6
-    gain0: '30'
+    gain0: '10'
     gain1: '10'
     gain10: '10'
     gain11: '10'
