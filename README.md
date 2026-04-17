@@ -25,6 +25,9 @@ At field #88, Auto-level detection malfunction (vsync IRE computed at -12.73, no
 $> make tbc
 ```
 
+![clipboard_20260417165845.bmp](vx_images/clipboard_20260417165845.bmp)
+
+This picture shows a NTSC GNURadio LD-RF signal demodulated with a PAL Laserdisc Player.
 
 
 ## Screenshots
@@ -34,4 +37,5 @@ $> make tbc
 ![clipboard_20260314165405.bmp](vx_images/clipboard_20260314165405.bmp)
 ![clipboard_20260228150510.bmp](vx_images/clipboard_20260228150510.bmp)
 ![clipboard_20260228150733.bmp](vx_images/clipboard_20260228150733.bmp)
+
 
