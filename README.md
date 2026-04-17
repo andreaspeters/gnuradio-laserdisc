@@ -4,6 +4,8 @@ The goal of this project is, to use gnuradio to modulate a NTSC RF signal into a
 Laserdisc compatible RF signal. To test the LD RF signal, I'm using
 [tbc-tools](https://github.com/oyvindln/vhs-decode/wiki/Linux-Build).
 
+I've created specialy for this project a [youtube channel](https://www.youtube.com/@DC6AP).
+
 
 ```bash
 $> make decode
