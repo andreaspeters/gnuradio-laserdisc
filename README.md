@@ -27,8 +27,7 @@ $> make tbc
 
 ## Screenshots
 
-
-![clipboard_20260314170604.bmp](vx_images/clipboard_20260314170604.bmp)
+![clipboard_20260417163451.bmp](vx_images/clipboard_20260417163451.bmp)
 ![clipboard_20260314170629.bmp](vx_images/clipboard_20260314170629.bmp)
 ![clipboard_20260314165405.bmp](vx_images/clipboard_20260314165405.bmp)
 ![clipboard_20260228150510.bmp](vx_images/clipboard_20260228150510.bmp)
