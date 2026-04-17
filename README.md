@@ -27,7 +27,8 @@ $> make tbc
 
 ![clipboard_20260417165845.bmp](vx_images/clipboard_20260417165845.bmp)
 
-This picture shows a NTSC GNURadio LD-RF signal demodulated with a PAL Laserdisc Player.
+This picture shows a NTSC "Test Signal" (Dots and Squares), modulated with GNURadio
+to LD-RF and demodulated with a PAL Laserdisc Player.
 
 
 ## Screenshots
