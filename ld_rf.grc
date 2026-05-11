@@ -96,7 +96,7 @@ blocks:
     options: '[0, 1, 2]'
     orient: Qt.QHBoxLayout
     type: real
-    value: 61.25e6
+    value: 67.25e6
     widget: radio_buttons
   states:
     bus_sink: false
@@ -572,7 +572,7 @@ blocks:
     affinity: ''
     alias: ''
     antenna: auto
-    calibrate_dciq: Disabled
+    calibrate_dciq: Enabled
     channel_indexes: '[0]'
     chip_index: '0'
     comment: ''
